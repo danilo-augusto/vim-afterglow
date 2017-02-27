@@ -4,7 +4,6 @@
 " Vim color file - Afterglow (monokai version)
 "
 " Hex colour conversion functions borrowed from the theme 'Desert256'
-" Color palette from...
 
 set background=dark
 if version > 580
