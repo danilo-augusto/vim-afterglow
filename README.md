@@ -1,6 +1,6 @@
 # vim-afterglow
 
-Vim adaptation of the color scheme [Afterglow](https://github.com/YabataDesign/afterglow-theme) from Sublime Text 2/3.
+Vim adaptation of the [Afterglow](https://github.com/YabataDesign/afterglow-theme) colorscheme from Sublime Text 2/3.
 
 Airline scheme already included.
 
