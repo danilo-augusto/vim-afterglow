@@ -3,7 +3,7 @@
 " Date: 2017-02-27
 " Vim color file - Afterglow (monokai version)
 "
-" Hex colour conversion functions borrowed from the theme 'Desert256'
+" Hex color conversion functions borrowed from the theme 'Desert256'
 
 set background=dark
 if version > 580
