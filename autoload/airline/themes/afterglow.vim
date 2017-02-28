@@ -21,13 +21,13 @@ let s:gui0E = "#afd7d7"
 let s:gui0F = "#dfdfaf"
 
 let s:cterm00 = "234"
-let s:cterm01 = "138"
+let s:cterm01 = "91"
 let s:cterm02 = "180"
 let s:cterm03 = "102"
-let s:cterm04 = "131"
-let s:cterm05 = "95"
+let s:cterm04 = "67"
+let s:cterm05 = "132"
 let s:cterm06 = "109"
-let s:cterm07 = "222"
+let s:cterm07 = "231"
 let s:cterm08 = "101"
 let s:cterm09 = "138"
 let s:cterm0A = "180"
@@ -73,7 +73,7 @@ let g:airline#themes#afterglow#palette.visual_modified = s:modified
 " Replace mode
 let s:R1 = [s:gui08, s:gui00, s:cterm08, s:cterm00]
 let s:R2 = s:N2
-let s:R3 = [s:guiWhite, s:gui05, s:ctermWhite, s:cterm03]
+let s:R3 = [s:guiWhite, s:gui05, s:ctermWhite, s:cterm05]
 let g:airline#themes#afterglow#palette.replace = airline#themes#generate_color_map(s:R1, s:R2, s:R3)
 let g:airline#themes#afterglow#palette.replace_modified = s:modified
 
