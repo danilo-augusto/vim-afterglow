@@ -290,7 +290,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     call <SID>X("Define", s:wine, "", "")
     call <SID>X("Include", s:wine, "", "")
     call <SID>X("Tag", s:orange, "", "bold")
-    call <SID>X("Underlined", "sg:orange", "", "underline")
+    call <SID>X("Underlined", s:orange, "", "underline")
 
     syntax match commonOperator "\(+\|=\|-\|*\|\^\|\/\||\)"
     hi link commonOperator Operator
