@@ -1,8 +1,14 @@
 # vim-afterglow
 
-Vim adaptation of the [Afterglow](https://github.com/YabataDesign/afterglow-theme) colorscheme from Sublime Text 2/3.
+Vim adaptation of the [Afterglow](https://github.com/YabataDesign/afterglow-theme) theme from Sublime Text 2/3.
 
-Airline scheme already included.
+Airline scheme included.
+
+## Setup
+
+- To enable it, simply add `colorscheme afterglow` (not ~~vim-afterglow~~) to your `~/.vimrc` after having installed the plugin (manually or by using a package manager).
+
+- Airline theme should be updated accordingly, but can be explicitly specified by using `let g:airline_theme='afterglow'`.
 
 ## Screenshots
 
