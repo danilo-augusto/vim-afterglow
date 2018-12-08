@@ -345,7 +345,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     call <SID>X("pythonStatement", s:blue, "", "")
     call <SID>X("pythonConditional", s:wine, "", "")
     call <SID>X("pythonRepeat", s:wine, "", "")
-    call <SID>X("pythonException", s:wine, "", "")
+    call <SID>X("pythonException", s:orange, "", "")
     call <SID>X("pythonFunction", s:green, "", "italic")
     call <SID>X("pythonPreCondit", s:wine, "", "")
     call <SID>X("pythonExClass", s:orange, "", "")
