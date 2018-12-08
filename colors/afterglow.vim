@@ -271,7 +271,6 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     end
 
     " Standard Highlighting
-    call <SID>X("Comment", s:comment, "", "")
     call <SID>X("Title", s:comment, "", "bold")
     call <SID>X("Identifier", s:orange, "", "")
     call <SID>X("Statement", s:wine, "", "")
@@ -550,6 +549,15 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
         call <SID>X("SignColumn", "", s:chosen_background, "none")
     end
     call <SID>X("Todo", s:red, s:chosen_background, "bold")
+
+    " Option g:afterglow_italic_comments
+    if exists( "g:afterglow_italic_comments") && g:afterglow_italic_comments
+        call <SID>X("Comment", s:comment, "", "italic")
+    else
+        " make the global variable available to command mode
+        let g:afterglow_italic_comments = 0
+        call <SID>X("Comment", s:comment, "", "")
+    endif
 
     " Delete Functions
     delf <SID>X
