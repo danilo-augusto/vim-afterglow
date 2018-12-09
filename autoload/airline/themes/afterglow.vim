@@ -55,7 +55,6 @@ else
     let s:guiAlmostBlack = "#2a2a2a"
     let s:ctermAlmostBlack = "235"
 endif
-" Settings dependent on g:afterglow_blackout
 
 let g:airline#themes#afterglow#palette = {}
 let s:modified = { 'airline_c': [s:gui03, '', s:cterm03, '', ''] }
