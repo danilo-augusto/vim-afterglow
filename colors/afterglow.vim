@@ -539,11 +539,19 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     if !exists( "g:afterglow_blackout")
         let g:afterglow_blackout = 0
     endif
+    if !exists( "g:afterglow_no_terminal_background")
+        let g:afterglow_no_terminal_background = 0
+    endif
     if g:afterglow_blackout
         let s:chosen_background = s:black
     else
         let s:chosen_background = s:background
     endif
+    if g:afterglow_no_terminal_background
+                \ && !has("gui_running") && !exists('g:GtkGuiLoaded')
+        let s:chosen_background = ""
+    endif
+
     " Settings dependent on g:afterglow_blackout
     call <SID>X("Normal", s:foreground, s:chosen_background, "")
     call <SID>X("LineNr", s:comment, s:chosen_background, "")
