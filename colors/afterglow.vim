@@ -548,7 +548,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
         let s:chosen_background = s:background
     endif
     if g:afterglow_no_terminal_background
-                \ && !has("gui_running") && !exists('g:GtkGuiLoaded')
+                \ && !has("gui_running") && !exists("g:GtkGuiLoaded")
         let s:chosen_background = ""
     endif
 
