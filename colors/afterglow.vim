@@ -1,5 +1,5 @@
 " File: afterglow.vim
-" Author: Danilo Augusto <daniloaugusto.ita16@gmail.com>
+" Author: Danilo Augusto
 " Date: 2017-02-27
 " Vim color file - Afterglow (monokai version)
 "
