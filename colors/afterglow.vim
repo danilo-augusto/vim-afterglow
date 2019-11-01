@@ -230,6 +230,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
     " Sets the highlighting for the given group
     fun <SID>X(group, fg, bg, attr)
+        " NOTE: this function is evidently not adapted to named colors, nor 'none' (cf. issue #13)
         if a:fg != ""
             exec "hi " . a:group . " guifg=#" . a:fg . " ctermfg=" . <SID>rgb(a:fg)
         endif
@@ -545,8 +546,13 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
         let g:afterglow_inherit_background = 0
     endif
 
+    " Background behavior inference here:
     if g:afterglow_inherit_background
-        let s:chosen_background = "none"
+        " Avoiding 'none' as <SID>X is not prepared to receive named colors
+        " Instead, using the empty string so that we skip highlighting this group's background
+        " The cleared version of the background is indeed what we expect from 'inheriting' from the environment.
+        " It respects transparency, adapts on the fly and so on. Not sure about tmux compatibility though.
+        let s:chosen_background = ""
     elseif g:afterglow_blackout
         let s:chosen_background = s:black
     else
