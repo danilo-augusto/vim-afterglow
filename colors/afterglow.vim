@@ -536,10 +536,6 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     call <SID>X("scalaBackTick", s:blue, "", "")
 
     " Git
-    call <SID>X("diffAdded", s:green, "", "")
-    call <SID>X("diffRemoved", s:red, "", "")
-    call <SID>X("diffLine", s:blue, "", "italic")
-    call <SID>X("diffSubname", s:foreground, "", "")
     call <SID>X("gitFile", s:orange, "", "")
     call <SID>X("gitcommitSummary", "", "", "bold")
 
@@ -583,6 +579,31 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
         let g:afterglow_italic_comments = 0
         call <SID>X("Comment", s:comment, "", "")
     endif
+
+    " Diffs
+    " Plugin GitGutter uses highlight link to some of the groups below
+    call <SID>X("DiffAdded", s:green, s:chosen_background, "")
+    call <SID>X("DiffChange", s:yellow, s:chosen_background, "")
+    call <SID>X("DiffDelete", s:red, s:chosen_background, "")
+    call <SID>X("DiffLine", s:blue, s:chosen_background, "italic")
+    call <SID>X("DiffSubname", s:foreground, s:chosen_background, "")
+    " Aliases
+    " For plugins compatibility and some backcompatibility
+    " cf. https://github.com/vim/vim-history/blob/c2257f84a000fd08d3ba80d6b1a5d1c0148a39ea/runtime/syntax/diff.vim#L13
+    hi link diffAdded DiffAdded
+    hi link diffChange DiffChange
+    hi link diffDelete DiffDelete
+    hi link diffLine DiffLine
+    hi link diffSubname DiffSubname
+    hi link DiffRemoved DiffDelete
+    hi link diffRemoved DiffDelete
+    hi link GitGutterChangeLineDefault DiffDelete
+    hi link DiffAdd DiffAdded
+    hi link diffAdd DiffAdded
+
+    " ALE (plugin)
+    call <SID>X("ALEWarningSign", s:orange, s:chosen_background, "bold")
+    call <SID>X("ALEErrorSign", s:red, s:chosen_background, "bold")
 
     " Delete Functions
     delf <SID>X
