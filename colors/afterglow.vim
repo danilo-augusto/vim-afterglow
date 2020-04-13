@@ -590,16 +590,16 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     " Aliases
     " For plugins compatibility and some backcompatibility
     " cf. https://github.com/vim/vim-history/blob/c2257f84a000fd08d3ba80d6b1a5d1c0148a39ea/runtime/syntax/diff.vim#L13
-    hi link diffAdded DiffAdded
-    hi link diffChange DiffChange
-    hi link diffDelete DiffDelete
-    hi link diffLine DiffLine
-    hi link diffSubname DiffSubname
-    hi link DiffRemoved DiffDelete
-    hi link diffRemoved DiffDelete
-    hi link GitGutterChangeLineDefault DiffDelete
-    hi link DiffAdd DiffAdded
-    hi link diffAdd DiffAdded
+    hi! link diffAdded DiffAdded
+    hi! link diffChange DiffChange
+    hi! link diffDelete DiffDelete
+    hi! link diffLine DiffLine
+    hi! link diffSubname DiffSubname
+    hi! link DiffRemoved DiffDelete
+    hi! link diffRemoved DiffDelete
+    hi! link GitGutterChangeLineDefault DiffDelete
+    hi! link DiffAdd DiffAdded
+    hi! link diffAdd DiffAdded
 
     " ALE (plugin)
     call <SID>X("ALEWarningSign", s:orange, s:chosen_background, "bold")
